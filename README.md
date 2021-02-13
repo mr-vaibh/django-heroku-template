@@ -26,6 +26,9 @@ Using this template to create a new Django app is easy::
 
 You can replace ``djangoproject`` with your desired project name.
 
+## For Static/Media files management
+[https://docs.djangoproject.com/en/3.1/howto/static-files/](https://docs.djangoproject.com/en/3.1/howto/static-files/)
+
 ## Deployment to Heroku
 
     $ git init
