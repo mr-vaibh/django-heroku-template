@@ -29,6 +29,23 @@ You can replace ``djangoproject`` with your desired project name.
 ## For Static/Media files management
 [https://docs.djangoproject.com/en/3.1/howto/static-files/](https://docs.djangoproject.com/en/3.1/howto/static-files/)
 
+## For .ENV environment variable
+https://help.pythonanywhere.com/pages/environment-variables-for-web-apps/
+
+Write this before calling `get_wsgi_application` in _wsgi.py_
+
+    import os
+    from dotenv import load_dotenv
+    project_folder = os.path.expanduser('~/my-project-dir')  # adjust as appropriate
+    load_dotenv(os.path.join(project_folder, '.env'))
+
+Usage in module
+
+    import os
+    SECRET_KEY = os.environ["SECRET_KEY"]
+
+---
+
 ## Deployment to Heroku
 
     $ git init
