@@ -32,12 +32,14 @@ You can replace ``djangoproject`` with your desired project name.
 ## For .ENV environment variable
 https://help.pythonanywhere.com/pages/environment-variables-for-web-apps/
 
-Write this before calling `get_wsgi_application` in _wsgi.py_
+Write this in `manage.py` and before calling `get_wsgi_application` in `_wsgi.py_`
 
-    import os
+    # working with environment variables
+    from pathlib import Path
     from dotenv import load_dotenv
-    project_folder = os.path.expanduser('~/my-project-dir')  # adjust as appropriate
-    load_dotenv(os.path.join(project_folder, '.env'))
+    
+    env_path = Path('.') / '.env'
+    load_dotenv(dotenv_path=env_path)
 
 Usage in module
 
