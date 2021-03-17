@@ -26,6 +26,9 @@ SECRET_KEY = '{{ secret_key }}'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# TURN THIS ON IN PRODUCTION
+SECURE_SSL_REDIRECT = False
+
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
